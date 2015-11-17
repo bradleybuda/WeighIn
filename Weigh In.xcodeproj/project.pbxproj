@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A203FA5B1BFAEF2C00E82309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203FA5A1BFAEF2C00E82309 /* AppDelegate.swift */; };
+		A203FA5D1BFAEF2C00E82309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203FA5C1BFAEF2C00E82309 /* ViewController.swift */; };
+		A203FA601BFAEF2C00E82309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A203FA5E1BFAEF2C00E82309 /* Main.storyboard */; };
+		A203FA621BFAEF2C00E82309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A203FA611BFAEF2C00E82309 /* Assets.xcassets */; };
+		A203FA651BFAEF2C00E82309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A203FA631BFAEF2C00E82309 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A203FA571BFAEF2C00E82309 /* Weigh In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weigh In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A203FA5A1BFAEF2C00E82309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A203FA5C1BFAEF2C00E82309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A203FA5F1BFAEF2C00E82309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A203FA611BFAEF2C00E82309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A203FA641BFAEF2C00E82309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A203FA661BFAEF2C00E82309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A203FA541BFAEF2C00E82309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A203FA4E1BFAEF2C00E82309 = {
+			isa = PBXGroup;
+			children = (
+				A203FA591BFAEF2C00E82309 /* Weigh In */,
+				A203FA581BFAEF2C00E82309 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A203FA581BFAEF2C00E82309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A203FA571BFAEF2C00E82309 /* Weigh In.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A203FA591BFAEF2C00E82309 /* Weigh In */ = {
+			isa = PBXGroup;
+			children = (
+				A203FA5A1BFAEF2C00E82309 /* AppDelegate.swift */,
+				A203FA5C1BFAEF2C00E82309 /* ViewController.swift */,
+				A203FA5E1BFAEF2C00E82309 /* Main.storyboard */,
+				A203FA611BFAEF2C00E82309 /* Assets.xcassets */,
+				A203FA631BFAEF2C00E82309 /* LaunchScreen.storyboard */,
+				A203FA661BFAEF2C00E82309 /* Info.plist */,
+			);
+			path = "Weigh In";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A203FA561BFAEF2C00E82309 /* Weigh In */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A203FA691BFAEF2C00E82309 /* Build configuration list for PBXNativeTarget "Weigh In" */;
+			buildPhases = (
+				A203FA531BFAEF2C00E82309 /* Sources */,
+				A203FA541BFAEF2C00E82309 /* Frameworks */,
+				A203FA551BFAEF2C00E82309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Weigh In";
+			productName = "Weigh In";
+			productReference = A203FA571BFAEF2C00E82309 /* Weigh In.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A203FA4F1BFAEF2C00E82309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Bradley Buda";
+				TargetAttributes = {
+					A203FA561BFAEF2C00E82309 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = A203FA521BFAEF2C00E82309 /* Build configuration list for PBXProject "Weigh In" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A203FA4E1BFAEF2C00E82309;
+			productRefGroup = A203FA581BFAEF2C00E82309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A203FA561BFAEF2C00E82309 /* Weigh In */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A203FA551BFAEF2C00E82309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A203FA651BFAEF2C00E82309 /* LaunchScreen.storyboard in Resources */,
+				A203FA621BFAEF2C00E82309 /* Assets.xcassets in Resources */,
+				A203FA601BFAEF2C00E82309 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A203FA531BFAEF2C00E82309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A203FA5D1BFAEF2C00E82309 /* ViewController.swift in Sources */,
+				A203FA5B1BFAEF2C00E82309 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A203FA5E1BFAEF2C00E82309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A203FA5F1BFAEF2C00E82309 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A203FA631BFAEF2C00E82309 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A203FA641BFAEF2C00E82309 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A203FA671BFAEF2C00E82309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A203FA681BFAEF2C00E82309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A203FA6A1BFAEF2C00E82309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Weigh In/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleybuda.Weigh-In";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A203FA6B1BFAEF2C00E82309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Weigh In/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bradleybuda.Weigh-In";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A203FA521BFAEF2C00E82309 /* Build configuration list for PBXProject "Weigh In" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A203FA671BFAEF2C00E82309 /* Debug */,
+				A203FA681BFAEF2C00E82309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A203FA691BFAEF2C00E82309 /* Build configuration list for PBXNativeTarget "Weigh In" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A203FA6A1BFAEF2C00E82309 /* Debug */,
+				A203FA6B1BFAEF2C00E82309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A203FA4F1BFAEF2C00E82309 /* Project object */;
+}
