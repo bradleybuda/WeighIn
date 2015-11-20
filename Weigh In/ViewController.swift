@@ -20,8 +20,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var weightField: UITextField!
+    
+    @IBAction func weightValueChanged(sender: AnyObject) {
+        if (weightField.text != nil) {
+            NSLog(weightField.text!);
+        }
+    }
+    
     @IBAction func recordWeight(sender: AnyObject) {
         NSLog("Hello!");
+        if (weightField.text != nil) {
+            NSLog(weightField.text!)
+        }
     }
 }
 

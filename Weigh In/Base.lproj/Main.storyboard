@@ -34,7 +34,10 @@
                                         <rect key="frame" x="0.0" y="43" width="520" height="419"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="weightValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="4Hr-3f-KFc"/>
+                                        </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-0z-lR9">
                                         <rect key="frame" x="0.0" y="472" width="520" height="29"/>
@@ -71,6 +74,9 @@
                             <constraint firstAttribute="bottom" secondItem="H4f-yW-0aD" secondAttribute="bottom" constant="20" symbolic="YES" id="rMr-Qt-Ldy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="weightField" destination="umP-CY-i1g" id="Nxa-sU-z2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
