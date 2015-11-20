@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var weightField: UITextField!
     
     @IBAction func weightValueChanged(sender: AnyObject) {
-        if (weightField.text != nil) {
-            NSLog(weightField.text!);
+        let weightValue = weightField.text!
+        if (weightValue.rangeOfString("^\\d\\d\\d?\\.\\d", options: .RegularExpressionSearch) != nil) {
+            NSLog(weightValue);
         }
     }
     

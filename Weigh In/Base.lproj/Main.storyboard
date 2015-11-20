@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="43" width="520" height="419"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                         <connections>
                                             <action selector="weightValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="4Hr-3f-KFc"/>
                                         </connections>
