@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
 
@@ -22,17 +23,40 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var weightField: UITextField!
     
+    func weightValue() -> String {
+        return weightField.text!
+    }
+    
     @IBAction func weightValueChanged(sender: AnyObject) {
-        let weightValue = weightField.text!
-        if (weightValue.rangeOfString("^\\d\\d\\d?\\.\\d", options: .RegularExpressionSearch) != nil) {
-            NSLog(weightValue);
+        if (weightValue().rangeOfString("^\\d\\d\\d?\\.\\d", options: .RegularExpressionSearch) != nil) {
+            NSLog(weightValue() )
+            self.view.endEditing(true)
         }
     }
     
     @IBAction func recordWeight(sender: AnyObject) {
-        NSLog("Hello!");
-        if (weightField.text != nil) {
-            NSLog(weightField.text!)
+        if (weightField.text == nil) {
+            NSLog("No weight recorded")
+            return
+        }
+        
+        if (!HKHealthStore.isHealthDataAvailable()) {
+            NSLog("No HealthKit on this device")
+            return
+        }
+        
+        let store = HKHealthStore.init();
+        let types: Set<HKQuantityType> = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!]
+        store.requestAuthorizationToShareTypes(types, readTypes: types) { (b: Bool, e: NSError?) -> Void in
+            let objType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+            let quantity = HKQuantity(unit: HKUnit.poundUnit(), doubleValue: (self.weightValue() as NSString).doubleValue)
+            let sample = HKQuantitySample(type: objType, quantity: quantity, startDate: NSDate(), endDate: NSDate())
+            store.saveObject(sample, withCompletion: { (b: Bool, e: NSError?) -> Void in
+                NSLog("saved data!")
+                dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                    self.weightField.text = nil
+                }
+            })
         }
     }
 }
