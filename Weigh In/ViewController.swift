@@ -11,6 +11,9 @@ import HealthKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var unitField: UISegmentedControl!
+    @IBOutlet weak var weightField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,10 +24,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var weightField: UITextField!
     
     func weightValue() -> String {
         return weightField.text!
+    }
+    
+    func unitValue() -> HKUnit {
+        let unitIndex = unitField.selectedSegmentIndex
+        if (unitIndex == 0) {
+            return HKUnit.poundUnit()
+        } else if (unitIndex == 1) {
+            return HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo)
+        } else {
+            assert(false, "Invalid unit");
+        }
     }
     
     @IBAction func weightValueChanged(sender: AnyObject) {
@@ -49,7 +62,9 @@ class ViewController: UIViewController {
         let types: Set<HKQuantityType> = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!]
         store.requestAuthorizationToShareTypes(types, readTypes: types) { (b: Bool, e: NSError?) -> Void in
             let objType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
-            let quantity = HKQuantity(unit: HKUnit.poundUnit(), doubleValue: (self.weightValue() as NSString).doubleValue)
+            
+            // TODO factor out to base class
+            let quantity = HKQuantity(unit: self.unitValue(), doubleValue: (self.weightValue() as NSString).doubleValue)
             let sample = HKQuantitySample(type: objType, quantity: quantity, startDate: NSDate(), endDate: NSDate())
             store.saveObject(sample, withCompletion: { (b: Bool, e: NSError?) -> Void in
                 NSLog("saved data!")
