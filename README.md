@@ -5,3 +5,4 @@
 - [ ] Show last weight
 - [ ] Better submit confirmation
 - [ ] Show chart
+- [ ] App Icon
