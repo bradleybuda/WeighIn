@@ -11,6 +11,8 @@ import HealthKit
 
 class ViewController: UIViewController {
 
+    let defaultUnitKey = "defaultUnit"
+    
     @IBOutlet weak var unitField: UISegmentedControl!
     @IBOutlet weak var weightField: UITextField!
     
@@ -19,12 +21,13 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        var savedUnit: Int? = defaults().integerForKey("defaultUnit")
-        if (savedUnit == nil) {
-            savedUnit = 0 // meta-default
-        }
-        unitField.selectedSegmentIndex = savedUnit!
         super.viewDidLoad()
+
+        // set units to saved preference
+        let savedUnit: Int? = defaults().integerForKey(defaultUnitKey)
+        if (savedUnit != nil) {
+            unitField.selectedSegmentIndex = savedUnit!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unitValueChanged(sender: AnyObject) {
-        defaults().setInteger(unitIndex(), forKey: "defaultUnit")
+        defaults().setInteger(unitIndex(), forKey: defaultUnitKey)
     }
     
     @IBAction func recordWeight(sender: AnyObject) {

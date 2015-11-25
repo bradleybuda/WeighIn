@@ -2,6 +2,7 @@
 - [ ] Pop keyboard on app focus
 - [ ] Show last weight
 - [ ] Better submit confirmation
+- [ ] Rethink auto-dismiss of keyboard
 - [ ] Show chart
 - [ ] App Icon
 - [ ] Splash screen
