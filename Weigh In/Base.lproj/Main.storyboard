@@ -49,6 +49,9 @@
                                             <segment title="Pounds"/>
                                             <segment title="Kilos"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="unitValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qlb-r3-21T"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUA-32-qHN">
                                         <rect key="frame" x="0.0" y="510" width="520" height="30"/>

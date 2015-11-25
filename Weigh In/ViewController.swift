@@ -14,9 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var unitField: UISegmentedControl!
     @IBOutlet weak var weightField: UITextField!
     
+    func defaults() -> NSUserDefaults {
+        return NSUserDefaults.standardUserDefaults()
+    }
+    
     override func viewDidLoad() {
+        var savedUnit: Int? = defaults().integerForKey("defaultUnit")
+        if (savedUnit == nil) {
+            savedUnit = 0 // meta-default
+        }
+        unitField.selectedSegmentIndex = savedUnit!
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,11 +37,14 @@ class ViewController: UIViewController {
         return weightField.text!
     }
     
+    func unitIndex() -> Int {
+        return unitField.selectedSegmentIndex
+    }
+    
     func unitValue() -> HKUnit {
-        let unitIndex = unitField.selectedSegmentIndex
-        if (unitIndex == 0) {
+        if (unitIndex() == 0) {
             return HKUnit.poundUnit()
-        } else if (unitIndex == 1) {
+        } else if (unitIndex() == 1) {
             return HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo)
         } else {
             assert(false, "Invalid unit");
@@ -45,6 +56,10 @@ class ViewController: UIViewController {
             NSLog(weightValue() )
             self.view.endEditing(true)
         }
+    }
+    
+    @IBAction func unitValueChanged(sender: AnyObject) {
+        defaults().setInteger(unitIndex(), forKey: "defaultUnit")
     }
     
     @IBAction func recordWeight(sender: AnyObject) {
