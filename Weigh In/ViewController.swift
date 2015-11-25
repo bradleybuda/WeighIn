@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         if (savedUnit != nil) {
             unitField.selectedSegmentIndex = savedUnit!
         }
+        
+        // pop the keyboard
+        weightField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {

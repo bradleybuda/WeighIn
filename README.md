@@ -1,5 +1,5 @@
 # TODO
-- [ ] Pop keyboard on app focus
+
 - [ ] Show last weight
 - [ ] Better submit confirmation
 - [ ] Rethink auto-dismiss of keyboard
@@ -7,5 +7,6 @@
 - [ ] App Icon
 - [ ] Splash screen
 - [ ] App Store
+- [X] Pop keyboard on app focus
 - [x] Make pounds / kilos selector work
 - [X] Remember pounds / kilos as preference
