@@ -51,9 +51,13 @@ class ViewController: UIViewController {
         }
     }
     
+    func weightQuantity() -> HKQuantity {
+        return HKQuantity(unit: unitValue(), doubleValue: (weightValue() as NSString).doubleValue)
+    }
+    
     @IBAction func weightValueChanged(sender: AnyObject) {
         if (weightValue().rangeOfString("^\\d\\d\\d?\\.\\d", options: .RegularExpressionSearch) != nil) {
-            NSLog(weightValue() )
+            NSLog(weightValue())
             self.view.endEditing(true)
         }
     }
@@ -72,21 +76,29 @@ class ViewController: UIViewController {
             NSLog("No HealthKit on this device")
             return
         }
-        
+
+        let now = NSDate()
         let store = HKHealthStore.init();
         let types: Set<HKQuantityType> = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!]
-        store.requestAuthorizationToShareTypes(types, readTypes: types) { (b: Bool, e: NSError?) -> Void in
-            let objType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
-            
-            // TODO factor out to base class
-            let quantity = HKQuantity(unit: self.unitValue(), doubleValue: (self.weightValue() as NSString).doubleValue)
-            let sample = HKQuantitySample(type: objType, quantity: quantity, startDate: NSDate(), endDate: NSDate())
-            store.saveObject(sample, withCompletion: { (b: Bool, e: NSError?) -> Void in
-                NSLog("saved data!")
-                dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-                    self.weightField.text = nil
-                }
-            })
+        store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
+            if (authSuccess) {
+                let bodyMassType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+                let sample = HKQuantitySample(type: bodyMassType, quantity: self.weightQuantity(), startDate: now, endDate: now)
+                store.saveObject(sample, withCompletion: { (saveSuccess: Bool, saveError: NSError?) -> Void in
+                    if (saveSuccess) {
+                        NSLog("saved data!")
+                        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                            self.weightField.text = nil
+                        }
+                    } else {
+                        NSLog("Call to saveObject failed with error")
+                        NSLog("%@", saveError!)
+                    }
+                })
+            } else {
+                NSLog("Call to requestAuthorizationToShareTypes failed with error")
+                NSLog("%@", authError!)
+            }
         }
     }
 }
