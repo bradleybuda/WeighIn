@@ -51,8 +51,13 @@ class ViewController: UIViewController {
             if (authSuccess) {
                 let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, samples: [HKSample]?, queryError: NSError?) -> Void in
                     let quantity = (samples![0] as! HKQuantitySample).quantity
-                    NSLog("we made it!")
-                    NSLog("%f",quantity.doubleValueForUnit(self.unitValue()))
+                    // TODO handle no data
+                    // TODO change if defaultUnit changes
+                    let quantityInDefaultUnit = quantity.doubleValueForUnit(self.unitValue())
+                    
+                    dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                        self.lastWeightLabel.text = "Last Weigh In: " + String(quantityInDefaultUnit) + " " + self.unitValue().unitString
+                    }
                 })
                 
                 self.store.executeQuery(lastWeightQuery)
