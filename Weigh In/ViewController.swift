@@ -50,13 +50,17 @@ class ViewController: UIViewController {
         self.store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
             if (authSuccess) {
                 let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, samples: [HKSample]?, queryError: NSError?) -> Void in
-                    let quantity = (samples![0] as! HKQuantitySample).quantity
+                    // TODO check queryError
+                    
+                    let sample = samples![0] as! HKQuantitySample
+                    let quantity = sample.quantity
                     // TODO handle no data
                     // TODO change if defaultUnit changes
+                    // TODO update after weighing in
                     let quantityInDefaultUnit = quantity.doubleValueForUnit(self.unitValue())
                     
                     dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-                        self.lastWeightLabel.text = "Last Weigh In: " + String(quantityInDefaultUnit) + " " + self.unitValue().unitString
+                        self.lastWeightLabel.text = "Last: \(String(quantityInDefaultUnit)) \(self.unitValue().unitString) at \(sample.startDate)"
                     }
                 })
                 
