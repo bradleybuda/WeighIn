@@ -8,6 +8,7 @@
 
 import UIKit
 import HealthKit
+import DateTools
 
 class ViewController: UIViewController {
 
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
                     let quantityInDefaultUnit = quantity.doubleValueForUnit(self.unitValue())
                     
                     dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-                        self.lastWeightLabel.text = "Last: \(String(quantityInDefaultUnit)) \(self.unitValue().unitString) at \(sample.startDate)"
+                        self.lastWeightLabel.text = "Last weigh in: \(String(quantityInDefaultUnit)) \(self.unitValue().unitString), \(sample.startDate.timeAgoSinceNow())"
                     }
                 })
                 
