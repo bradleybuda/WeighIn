@@ -30,8 +30,15 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading last measurement..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-Jx-PSr">
+                                        <rect key="frame" x="0.0" y="43" width="520" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="150.0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umP-CY-i1g">
-                                        <rect key="frame" x="0.0" y="43" width="520" height="419"/>
+                                        <rect key="frame" x="0.0" y="74" width="520" height="389"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -78,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lastWeightLabel" destination="KL7-Jx-PSr" id="Q1A-KF-wzl"/>
                         <outlet property="unitField" destination="d5A-0z-lR9" id="tDJ-7z-KYw"/>
                         <outlet property="weightField" destination="umP-CY-i1g" id="Nxa-sU-z2S"/>
                     </connections>

@@ -12,7 +12,18 @@ import HealthKit
 class ViewController: UIViewController {
 
     let defaultUnitKey = "defaultUnit"
+    var store: HKHealthStore
+    var bodyMassType: HKQuantityType
+    var types: Set<HKQuantityType>
     
+    required init?(coder aDecoder: NSCoder) {
+        store = HKHealthStore.init()
+        bodyMassType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+        types = [bodyMassType]
+        super.init(coder: aDecoder)
+    }
+    
+    @IBOutlet weak var lastWeightLabel: UILabel!
     @IBOutlet weak var unitField: UISegmentedControl!
     @IBOutlet weak var weightField: UITextField!
     
@@ -23,11 +34,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // verify healthkit
+        if (!HKHealthStore.isHealthDataAvailable()) {
+            NSLog("No HealthKit on this device")
+            return // TODO alert
+        }
+        
         // set units to saved preference
         let savedUnit: Int? = defaults().integerForKey(defaultUnitKey)
         if (savedUnit != nil) {
             unitField.selectedSegmentIndex = savedUnit!
         }
+        
+        // display last weight
+        self.store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
+            if (authSuccess) {
+                let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, samples: [HKSample]?, queryError: NSError?) -> Void in
+                    let quantity = (samples![0] as! HKQuantitySample).quantity
+                    NSLog("we made it!")
+                    NSLog("%f",quantity.doubleValueForUnit(self.unitValue()))
+                })
+                
+                self.store.executeQuery(lastWeightQuery)
+            } else {
+                NSLog("Call to requestAuthorizationToShareTypes failed with error")
+                NSLog("%@", authError!)
+            }
+        }
+
+        
+        lastWeightLabel.text = "Kilroy was here"
         
         // pop the keyboard
         weightField.becomeFirstResponder()
@@ -35,7 +71,9 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
+        // store?
     }
     
     
@@ -77,20 +115,13 @@ class ViewController: UIViewController {
             NSLog("No weight recorded")
             return
         }
-        
-        if (!HKHealthStore.isHealthDataAvailable()) {
-            NSLog("No HealthKit on this device")
-            return
-        }
 
         let now = NSDate()
-        let store = HKHealthStore.init();
-        let types: Set<HKQuantityType> = [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!]
-        store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
+        
+        self.store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
             if (authSuccess) {
-                let bodyMassType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
-                let sample = HKQuantitySample(type: bodyMassType, quantity: self.weightQuantity(), startDate: now, endDate: now)
-                store.saveObject(sample, withCompletion: { (saveSuccess: Bool, saveError: NSError?) -> Void in
+                let sample = HKQuantitySample(type: self.bodyMassType, quantity: self.weightQuantity(), startDate: now, endDate: now)
+                self.store.saveObject(sample, withCompletion: { (saveSuccess: Bool, saveError: NSError?) -> Void in
                     if (saveSuccess) {
                         NSLog("saved data!")
                         dispatch_async(dispatch_get_main_queue()) { [unowned self] in
