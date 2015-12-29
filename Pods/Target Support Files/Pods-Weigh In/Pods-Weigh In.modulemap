@@ -1,0 +1,6 @@
+framework module Pods_Weigh_In {
+  umbrella header "Pods-Weigh In-umbrella.h"
+
+  export *
+  module * { export * }
+}
