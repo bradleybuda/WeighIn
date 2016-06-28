@@ -86,9 +86,6 @@ class ViewController: UIViewController {
                 NSLog("%@", authError!)
             }
         }
-
-        
-        lastWeightLabel.text = "Kilroy was here"
         
         // pop the keyboard
         weightField.becomeFirstResponder()
