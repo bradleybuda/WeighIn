@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		19D228ED87FF16C882731F1ED7992B4E /* DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B2D9BD69F3E129C05C113B73E6789 /* DateTools-dummy.m */; };
-		275ACF3593A8458502DB74F659BBB5FA /* Pods-Weigh In-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 493D420D247C41C40CB95D13BDACE2E7 /* Pods-Weigh In-dummy.m */; };
 		2DAF4E8CD18ED10B30CCFB8FF1984A46 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE6989DAE042427A19A9207AD56A5B9 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4159C0A759E6090F2C58FCB2492DFB05 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 017659F041FE4410B20A74B54D0256A4 /* DTTimePeriod.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5DEA19A5C5A15F638AE5C5DB20A68C15 /* Pods-Weigh In-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 493D420D247C41C40CB95D13BDACE2E7 /* Pods-Weigh In-dummy.m */; };
 		66D6CA16EF2371E39FAB73473A89D8C1 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1D7E9326F3D0951BB8A9DEBD6FC070 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F00A3D837A718CBC5D7C7157CCF71A2 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A8AC568435FCB73E8A942DA50B7ADC /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		729719BE516B8080199215BB6A52117A /* DateTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1371AC8E69789A9278F9F94E5FC7ED66 /* DateTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73463E4795D4DCB6EC0AD9E14EA7915C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		7902018FD0635F9A5E4C13BFD67E3750 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E0AAAD8D81461FD00033F6ABE6F29CF /* DateTools.bundle */; };
-		7A2443603A6234236847E83E4D4D84DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		7A3C7A5DAEB1C695F060F0248053A1A6 /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E4DD3EC150C59B4ED6B47C2BFD9F7 /* NSDate+DateTools.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		801E845E678344633F3972FA4FC16B7C /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C1055D00661F59B73DB8069DDF7289 /* DTTimePeriodChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9BC7910A61F45206D435065CD0F23BA0 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 53FF24B388C732F8D98604A27B71C452 /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4A5DE1784D58F0D9AC336BE0A4936C4 /* DTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 997E50EB140883E449E3D792D13AA788 /* DTConstants.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		ACBC0421F1BC36492D1FD45BA9A377B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		AFF4480B4B63FA58209AEC8052207A92 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E417C8F30F6475B24AE7B0AC9DDB843C /* DTTimePeriodCollection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B4137B6F5B1EF819B8DF88A194F598ED /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = C508B5676986E983C704885755ADA1EB /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C16E0F1A698E02F1D49D4593A71BE38F /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C4ABF965C2D30A45F059C8B90526A9B5 /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC1CD7BAF05F362DECAA5698D1100896 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFB46875B98797A42FD0A53EC46FBF6 /* DTError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D86FBFA17F96A7845102F83A271DB612 /* Pods-Weigh In-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C095F41FDBB78C0284ABDEB9B87EFD4A /* Pods-Weigh In-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD710EA2C8E2D3E0917519775D1F571C /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF38A68A33413FC096CB68F7640FCA /* DTTimePeriodGroup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E3C1314B3E825850525C07406FC2F45D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		EE13D588E52431089F7406353C90A144 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 294557A0DF92EFDC78EF6FAEB3F961D2 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F423AB12C14DA731C42897A3D929D2B8 /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = E731F9D106FE6057CFB1F22CE7DFB8BA /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFB4B93014BD126909B9BBCED697D4D9 /* Pods-Weigh In-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C095F41FDBB78C0284ABDEB9B87EFD4A /* Pods-Weigh In-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C596A0F50BAC765F7CF506FE2215B27B /* PBXContainerItemProxy */ = {
+		10B7BA507E9657E2B7D56201F6776380 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -51,19 +51,19 @@
 		294557A0DF92EFDC78EF6FAEB3F961D2 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
 		2A05A36128EE56AD6AA267D6E765CB47 /* Pods-Weigh In.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weigh In.release.xcconfig"; sourceTree = "<group>"; };
 		337435F94D11F00652355144A9F3C57B /* Pods-Weigh In-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Weigh In-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		451675C96830FFD7041668F6C099BF5E /* Pods_Weigh_In.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weigh_In.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6C563C14061BF3E88109FACAC51BC7 /* DateTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		489B4A4356AAAADA50C0605AA71E28A0 /* Pods-Weigh In-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weigh In-resources.sh"; sourceTree = "<group>"; };
 		493D420D247C41C40CB95D13BDACE2E7 /* Pods-Weigh In-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Weigh In-dummy.m"; sourceTree = "<group>"; };
 		4F6F6126BF0524BC5D96C159629EFB23 /* Pods-Weigh In-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Weigh In-acknowledgements.plist"; sourceTree = "<group>"; };
 		53FF24B388C732F8D98604A27B71C452 /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
 		5DDF38A68A33413FC096CB68F7640FCA /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
+		6B26FEE8D3A87C25AB3CD0FD0AD6F307 /* Pods_Weigh_In.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weigh_In.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFB46875B98797A42FD0A53EC46FBF6 /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DTError.m; sourceTree = "<group>"; };
 		8C5F4943DD8826DB77EC44906AC099B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE6989DAE042427A19A9207AD56A5B9 /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		997E50EB140883E449E3D792D13AA788 /* DTConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTConstants.m; path = DateTools/DTConstants.m; sourceTree = "<group>"; };
 		AC4AB15A8C7A447A104F2201EFF7BCA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BD576D38721105603655E92860D543F7 /* DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTools.xcconfig; sourceTree = "<group>"; };
 		C095F41FDBB78C0284ABDEB9B87EFD4A /* Pods-Weigh In-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Weigh In-umbrella.h"; sourceTree = "<group>"; };
 		C4A70B6D78B31D809259C75E8ABD12F3 /* Pods-Weigh In-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Weigh In-frameworks.sh"; sourceTree = "<group>"; };
@@ -71,21 +71,21 @@
 		C508B5676986E983C704885755ADA1EB /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DTError.h; sourceTree = "<group>"; };
 		C5FDD3F1585801CD1CBF944F10B078F2 /* Pods-Weigh In.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Weigh In.modulemap"; sourceTree = "<group>"; };
 		C7A8AC568435FCB73E8A942DA50B7ADC /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CFFD125C1ACD555C3CDBEC3C0362D46D /* DateTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DateTools.modulemap; sourceTree = "<group>"; };
 		D8C1055D00661F59B73DB8069DDF7289 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
 		DB9B2D9BD69F3E129C05C113B73E6789 /* DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateTools-dummy.m"; sourceTree = "<group>"; };
 		E23503C94544E578EFFB088F8542E46A /* Pods-Weigh In.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Weigh In.debug.xcconfig"; sourceTree = "<group>"; };
 		E417C8F30F6475B24AE7B0AC9DDB843C /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
 		E731F9D106FE6057CFB1F22CE7DFB8BA /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
-		F398027F985EEEF7D44BB28723477139 /* DateTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93586612B72178C80F4B26B5D6288528 /* Frameworks */ = {
+		45DFC47EC7393746235ED9B3790F8ED4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBC0421F1BC36492D1FD45BA9A377B8 /* Foundation.framework in Frameworks */,
+				73463E4795D4DCB6EC0AD9E14EA7915C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2443603A6234236847E83E4D4D84DC /* Foundation.framework in Frameworks */,
+				E3C1314B3E825850525C07406FC2F45D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +124,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		4663A6856D4126B1AEAE2BC812D46D7D /* Pods-Weigh In */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,10 +153,10 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				3DB2A91B186E0D57CE2DE484CD1AB3E7 /* Pods */,
-				D1CC4F7C7849955D79A68A92F85DD326 /* Products */,
+				B73885EF682AA4CDCC03C45DACE98232 /* Products */,
 				22950EB4775DD93FB4FA56313DD9E644 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -177,20 +185,21 @@
 			path = DateTools;
 			sourceTree = "<group>";
 		};
+		B73885EF682AA4CDCC03C45DACE98232 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C6C563C14061BF3E88109FACAC51BC7 /* DateTools.framework */,
+				6B26FEE8D3A87C25AB3CD0FD0AD6F307 /* Pods_Weigh_In.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		C6DED0DE6F6A0186DA9B6141A1250B04 /* Support Files */ = {
@@ -207,26 +216,9 @@
 			path = "../Target Support Files/DateTools";
 			sourceTree = "<group>";
 		};
-		D1CC4F7C7849955D79A68A92F85DD326 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F398027F985EEEF7D44BB28723477139 /* DateTools.framework */,
-				451675C96830FFD7041668F6C099BF5E /* Pods_Weigh_In.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		96CD5B47A425B4E03874425C29924BE5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D86FBFA17F96A7845102F83A271DB612 /* Pods-Weigh In-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B901B089EC086B025BEE4BC074FBD6E9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,25 +235,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA20C253C11D605895F95D449DDE5600 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB4B93014BD126909B9BBCED697D4D9 /* Pods-Weigh In-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		67C06EE8CBD61EB3B83E3FFCC307E43D /* Pods-Weigh In */ = {
+		6E2803BD0482B517E8E470A12C74E555 /* Pods-Weigh In */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8F3AE8BE4CFE096458A592ADBB5E268 /* Build configuration list for PBXNativeTarget "Pods-Weigh In" */;
+			buildConfigurationList = DD832ABF5C0C70C2B253216C88D9CF31 /* Build configuration list for PBXNativeTarget "Pods-Weigh In" */;
 			buildPhases = (
-				6EEADCD2EDF6AD0A58FAD223E82FAB1D /* Sources */,
-				93586612B72178C80F4B26B5D6288528 /* Frameworks */,
-				96CD5B47A425B4E03874425C29924BE5 /* Headers */,
+				5FB6D283F0C5BA8B8553A0B98AD9ED1C /* Sources */,
+				45DFC47EC7393746235ED9B3790F8ED4 /* Frameworks */,
+				FA20C253C11D605895F95D449DDE5600 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				008F7465174E05F409544191664EF36B /* PBXTargetDependency */,
+				3DE147FCBDF0BA1BCFC2D89EAD11B288 /* PBXTargetDependency */,
 			);
 			name = "Pods-Weigh In";
 			productName = "Pods-Weigh In";
-			productReference = 451675C96830FFD7041668F6C099BF5E /* Pods_Weigh_In.framework */;
+			productReference = 6B26FEE8D3A87C25AB3CD0FD0AD6F307 /* Pods_Weigh_In.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AFEDA8059B169E4068B6DCC4D2F0B0E9 /* DateTools */ = {
@@ -279,7 +279,7 @@
 			);
 			name = DateTools;
 			productName = DateTools;
-			productReference = F398027F985EEEF7D44BB28723477139 /* DateTools.framework */;
+			productReference = 3C6C563C14061BF3E88109FACAC51BC7 /* DateTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -288,7 +288,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -299,12 +299,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D1CC4F7C7849955D79A68A92F85DD326 /* Products */;
+			productRefGroup = B73885EF682AA4CDCC03C45DACE98232 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AFEDA8059B169E4068B6DCC4D2F0B0E9 /* DateTools */,
-				67C06EE8CBD61EB3B83E3FFCC307E43D /* Pods-Weigh In */,
+				6E2803BD0482B517E8E470A12C74E555 /* Pods-Weigh In */,
 			);
 		};
 /* End PBXProject section */
@@ -336,57 +336,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EEADCD2EDF6AD0A58FAD223E82FAB1D /* Sources */ = {
+		5FB6D283F0C5BA8B8553A0B98AD9ED1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				275ACF3593A8458502DB74F659BBB5FA /* Pods-Weigh In-dummy.m in Sources */,
+				5DEA19A5C5A15F638AE5C5DB20A68C15 /* Pods-Weigh In-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		008F7465174E05F409544191664EF36B /* PBXTargetDependency */ = {
+		3DE147FCBDF0BA1BCFC2D89EAD11B288 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DateTools;
 			target = AFEDA8059B169E4068B6DCC4D2F0B0E9 /* DateTools */;
-			targetProxy = C596A0F50BAC765F7CF506FE2215B27B /* PBXContainerItemProxy */;
+			targetProxy = 10B7BA507E9657E2B7D56201F6776380 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		48C446E45B09DB432A8FAAE497044312 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD576D38721105603655E92860D543F7 /* DateTools.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateTools/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DateTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -401,10 +375,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -422,17 +398,81 @@
 			};
 			name = Debug;
 		};
-		744BC24F666B2979FB3314075567379C /* Debug */ = {
+		060203C167A6C479DF2C2D091B6405F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E23503C94544E578EFFB088F8542E46A /* Pods-Weigh In.debug.xcconfig */;
+			baseConfigurationReference = BD576D38721105603655E92860D543F7 /* DateTools.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateTools/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DateTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C99CF34567E91728EF00940D853F08A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A05A36128EE56AD6AA267D6E765CB47 /* Pods-Weigh In.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Weigh In/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Weigh In/Pods-Weigh In.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Weigh_In;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5B5BA8092CA708E2781867E79DB298A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23503C94544E578EFFB088F8542E46A /* Pods-Weigh In.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Weigh In/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -443,6 +483,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_Weigh_In;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -452,10 +493,40 @@
 			};
 			name = Debug;
 		};
-		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+		A6799B6594C8C37BB99EFCFF7BD15EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD576D38721105603655E92860D543F7 /* DateTools.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DateTools/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DateTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -472,7 +543,10 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -486,71 +560,14 @@
 			};
 			name = Release;
 		};
-		B2DB2DDA064EAC5FC73FA477A1B99854 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A05A36128EE56AD6AA267D6E765CB47 /* Pods-Weigh In.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Weigh In/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Weigh In/Pods-Weigh In.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Weigh_In;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BFC6B979A8822A03AE420CE45071D7E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD576D38721105603655E92860D543F7 /* DateTools.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DateTools/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DateTools/DateTools.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DateTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
-				74857149DC1E0D599B8A01A78349A926 /* Release */,
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -558,17 +575,17 @@
 		B43E01F5BF2588222B5923C17216C970 /* Build configuration list for PBXNativeTarget "DateTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				48C446E45B09DB432A8FAAE497044312 /* Debug */,
-				BFC6B979A8822A03AE420CE45071D7E6 /* Release */,
+				A6799B6594C8C37BB99EFCFF7BD15EB8 /* Debug */,
+				060203C167A6C479DF2C2D091B6405F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8F3AE8BE4CFE096458A592ADBB5E268 /* Build configuration list for PBXNativeTarget "Pods-Weigh In" */ = {
+		DD832ABF5C0C70C2B253216C88D9CF31 /* Build configuration list for PBXNativeTarget "Pods-Weigh In" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				744BC24F666B2979FB3314075567379C /* Debug */,
-				B2DB2DDA064EAC5FC73FA477A1B99854 /* Release */,
+				5B5BA8092CA708E2781867E79DB298A2 /* Debug */,
+				3C99CF34567E91728EF00940D853F08A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
