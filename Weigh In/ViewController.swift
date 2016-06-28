@@ -53,7 +53,22 @@ class ViewController: UIViewController {
                 let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, samples: [HKSample]?, queryError: NSError?) -> Void in
                     // TODO check queryError
                     
-                    let sample = samples![0] as! HKQuantitySample
+                    if (samples == nil) {
+                        NSLog("Don't think this is supposed to happen...");
+                        return;
+                    }
+                    
+                    let samples = samples!;
+                    
+                    if (samples.count == 0) {
+                        // TODO better UI
+                        NSLog("No historic data");
+                        return;
+                    }
+                    
+
+                    let sample = samples[0] as! HKQuantitySample;
+                    
                     let quantity = sample.quantity
                     // TODO handle no data
                     // TODO change if defaultUnit changes
