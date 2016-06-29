@@ -290,6 +290,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					6E2803BD0482B517E8E470A12C74E555 = {
+						DevelopmentTeam = 8FWJ3VD725;
+						DevelopmentTeamName = "Bradley Buda (Personal Team)";
+					};
+					AFEDA8059B169E4068B6DCC4D2F0B0E9 = {
+						DevelopmentTeam = 8FWJ3VD725;
+						DevelopmentTeamName = "Bradley Buda (Personal Team)";
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
