@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         store = HKHealthStore.init()
-        bodyMassType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+        bodyMassType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
         types = [bodyMassType]
         super.init(coder: aDecoder)
     }
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var unitField: UISegmentedControl!
     @IBOutlet weak var weightField: UITextField!
     
-    func defaults() -> NSUserDefaults {
-        return NSUserDefaults.standardUserDefaults()
+    func defaults() -> UserDefaults {
+        return UserDefaults.standard()
     }
     
     override func viewDidLoad() {
@@ -42,15 +42,15 @@ class ViewController: UIViewController {
         }
         
         // set units to saved preference
-        let savedUnit: Int? = defaults().integerForKey(defaultUnitKey)
+        let savedUnit: Int? = defaults().integer(forKey: defaultUnitKey)
         if (savedUnit != nil) {
             unitField.selectedSegmentIndex = savedUnit!
         }
         
         // display last weight
-        self.store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
+        self.store.requestAuthorization(toShare: types, read: types) { (authSuccess: Bool, authError: NSError?) -> Void in
             if (authSuccess) {
-                let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, optionalSamples: [HKSample]?, queryError: NSError?) -> Void in
+                let lastWeightQuery = HKSampleQuery(sampleType: self.bodyMassType, predicate: nil, limit: 1, sortDescriptors: [SortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)], resultsHandler: { (query: HKSampleQuery, optionalSamples: [HKSample]?, queryError: NSError?) -> Void in
                     // TODO check queryError
                     
                     guard let samples = optionalSamples else {
@@ -67,14 +67,16 @@ class ViewController: UIViewController {
                     // TODO handle no data
                     // TODO change if defaultUnit changes
                     // TODO update after weighing in
-                    let quantityInDefaultUnit = quantity.doubleValueForUnit(self.unitValue())
+                    let quantityInDefaultUnit = quantity.doubleValue(for: self.unitValue())
                     
-                    dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-                        self.lastWeightLabel.text = "Last weigh in: \(String(quantityInDefaultUnit)) \(self.unitValue().unitString), \(sample.startDate.timeAgoSinceNow())"
+                    let date = sample.startDate as NSDate
+                    
+                    DispatchQueue.main.async { [unowned self] in
+                        self.lastWeightLabel.text = "Last weigh in: \(String(quantityInDefaultUnit)) \(self.unitValue().unitString), \(date.timeAgoSinceNow())"
                     }
                 })
                 
-                self.store.executeQuery(lastWeightQuery)
+                self.store.execute(lastWeightQuery)
             } else {
                 NSLog("Call to requestAuthorizationToShareTypes failed with error")
                 NSLog("%@", authError!)
@@ -103,9 +105,9 @@ class ViewController: UIViewController {
     
     func unitValue() -> HKUnit {
         if (unitIndex() == 0) {
-            return HKUnit.poundUnit()
+            return HKUnit.pound()
         } else if (unitIndex() == 1) {
-            return HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Kilo)
+            return HKUnit.gramUnit(with: HKMetricPrefix.kilo)
         } else {
             assert(false, "Invalid unit");
         }
@@ -115,32 +117,32 @@ class ViewController: UIViewController {
         return HKQuantity(unit: unitValue(), doubleValue: (weightValue() as NSString).doubleValue)
     }
     
-    @IBAction func weightValueChanged(sender: AnyObject) {
-        if (weightValue().rangeOfString("^\\d\\d\\d?\\.\\d", options: .RegularExpressionSearch) != nil) {
+    @IBAction func weightValueChanged(_ sender: AnyObject) {
+        if (weightValue().range(of: "^\\d\\d\\d?\\.\\d", options: .regularExpressionSearch) != nil) {
             NSLog(weightValue())
             self.view.endEditing(true)
         }
     }
     
-    @IBAction func unitValueChanged(sender: AnyObject) {
-        defaults().setInteger(unitIndex(), forKey: defaultUnitKey)
+    @IBAction func unitValueChanged(_ sender: AnyObject) {
+        defaults().set(unitIndex(), forKey: defaultUnitKey)
     }
     
-    @IBAction func recordWeight(sender: AnyObject) {
+    @IBAction func recordWeight(_ sender: AnyObject) {
         if (weightField.text == nil) {
             NSLog("No weight recorded")
             return
         }
 
-        let now = NSDate()
+        let now = Date()
         
-        self.store.requestAuthorizationToShareTypes(types, readTypes: types) { (authSuccess: Bool, authError: NSError?) -> Void in
+        self.store.requestAuthorization(toShare: types, read: types) { (authSuccess: Bool, authError: NSError?) -> Void in
             if (authSuccess) {
-                let sample = HKQuantitySample(type: self.bodyMassType, quantity: self.weightQuantity(), startDate: now, endDate: now)
-                self.store.saveObject(sample, withCompletion: { (saveSuccess: Bool, saveError: NSError?) -> Void in
+                let sample = HKQuantitySample(type: self.bodyMassType, quantity: self.weightQuantity(), start: now, end: now)
+                self.store.save(sample, withCompletion: { (saveSuccess: Bool, saveError: NSError?) -> Void in
                     if (saveSuccess) {
                         NSLog("saved data!")
-                        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                        DispatchQueue.main.async { [unowned self] in
                             self.weightField.text = nil
                         }
                     } else {
